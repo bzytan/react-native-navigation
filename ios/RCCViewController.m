@@ -194,12 +194,17 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
 
 -(void)setStyleOnAppearForViewController:(UIViewController*)viewController
 {
+  UIColor *color = [RCTConvert UIColor:"#151515"]
+  self.view.backgroundColor = color;
+  
+  /*
     NSString *screenBackgroundColor = self.navigatorStyle[@"screenBackgroundColor"];
     if (screenBackgroundColor)
     {
       UIColor *color = screenBackgroundColor != (id)[NSNull null] ? [RCTConvert UIColor:screenBackgroundColor] : nil;
       self.view.backgroundColor = color;
     }
+   */
   
     NSString *navBarBackgroundColor = self.navigatorStyle[@"navBarBackgroundColor"];
     if (navBarBackgroundColor)
